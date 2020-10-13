@@ -15,7 +15,6 @@ header {
   height: 25%;
   background-color: blue;
   color: white;
-  position: relative;
 }
 
 header, footer {
@@ -31,9 +30,9 @@ header, footer {
   border: 10px solid white;
 }
 
-header>section>img {
+header>.cover>img {
   height: 100%;
-  width: 100%;
+  width: 50%;
 }
 
 .upercase {
@@ -41,11 +40,12 @@ header>section>img {
 }
 
 nav {
-  background-color: gray;
+  background-color: #504741;
 }
 
 ul li {
   list-style: none;
+  padding: 0;
 }
 
 nav>ul li {
@@ -59,11 +59,47 @@ nav>ul li:hover {
   cursor: pointer;
 }
 
+.sub_menu li {
+  border: none;
+  display: none;
+  background-color: #504741;
+}
+
+.sub_menu>ul {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  padding-left: 0px;
+  left: 0px;
+  right: auto;
+}
+
+.sub_menu {
+  position: relative;
+}
+
+.sub_menu::after {
+  content: " »";
+}
+
+.sub_menu:hover li {
+  text-transform: capitalize;
+  display: list-item;
+}
+
+.sub_menu>ul>li {
+  border-bottom: 2px solid #3c3531;
+}
+
+.sub_menu>ul>li:last-child {
+  border-bottom-width: 0px;
+}
+
 nav>ul>li:last-child {
   border-right-width: 0px;
 }
 
-h2 {
+header>section>h2 {
   padding-bottom: 50px;
 }
 
@@ -111,12 +147,15 @@ main::after {
 footer {
   background-color: white;
   border-radius: 5px;
+
 }
 
 footer>img:nth-child(2n+1) {
-  padding: 0 20%;
+  padding: 35px 20%;
 }
-
+footer>img{
+  padding: 35px 0;
+}
 .margin_top {
   margin: 24px 0;
 }
@@ -125,6 +164,10 @@ footer>img:nth-child(2n+1) {
   background-color: white;
   border-radius: 5px;
   padding: 10px 0;
+}
+footer>h2{
+  color: #cecece;
+  border-bottom: 1px solid #504741;
 }
 
 h3 {
