@@ -1,88 +1,133 @@
-*{
-  margin: auto;
+* {
+  margin: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   width: 50vw;
   background: url("../img/natural-default-pattern.png");
-  margin : auto;
+  margin: auto;
   text-align: center;
   max-width: 1120px;
 }
-header{
+
+header {
   height: 25%;
   background-color: blue;
-  color:white;
-  margin: 24px 0px;
-  position:relative;
+  color: white;
+  position: relative;
 }
-.cover{
+
+header, footer {
+  margin: 24px 0px 12px 0px;
+}
+
+.cover {
   background-image: url("../img/natural-default-header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 25%;
-  border: 5px solid white;
+  border: 10px solid white;
 }
-header>section>img{
+
+header>section>img {
   height: 100%;
   width: 100%;
 }
-.upercase{
+
+.upercase {
   text-transform: uppercase;
 }
-nav{
+
+nav {
   background-color: gray;
 }
+
 ul li {
-  display: inline-block;
   list-style: none;
+}
+
+nav>ul li {
+  display: inline-block;
   padding: 10px;
   border-right: 2px solid #3c3531;
 }
+
 nav>ul li:hover {
   background-color: #504741;
   cursor: pointer;
 }
-ul > li:last-child{
+
+nav>ul>li:last-child {
   border-right-width: 0px;
 }
-h2 {padding-bottom: 50px;}
 
-.as_left{
-  float: left;
-  width: 15vw;
-  color: green;
-  background-color: red;
+h2 {
+  padding-bottom: 50px;
 }
-main>aside>img{
+
+#rss_icon {
+  float: left;
+  margin: 10px;
+}
+
+.as_left {
+  position: relative;
+  text-align: left;
+  float: left;
+  width: 25%;
+  color: green;
+  margin-right: 12px;
+}
+
+.as_left>ul li {
+  padding: 0px
+}
+
+main>aside>img {
   width: 20px;
   height: 20px;
   display: inline-block;
 }
-div.box{
+
+main>div.box {
   float: left;
-  width: 20vw;
-  background-color: green;
-}
-.as_right{
-  float: right;
-  width: 15vw;
-  background-color: yellow;
+  width: 45%;
+  margin: 0 12px;
 }
 
-main::after{
+.as_right {
+  float: right;
+  width: 25%;
+}
+
+main::after {
   content: "";
   display: table;
   clear: both;
 }
 
-footer{
+footer {
   background-color: white;
   border-radius: 5px;
-  margin-bottom: 24px;                  /*Margin bottom*/
 }
 
-footer>img:nth-child(2n+1){
-  padding:0 20%;
+footer>img:nth-child(2n+1) {
+  padding: 0 20%;
+}
+
+.margin_top {
+  margin: 24px 0;
+}
+
+.box {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+h3 {
+  padding: 10px;
+  display: inline-block;
 }
